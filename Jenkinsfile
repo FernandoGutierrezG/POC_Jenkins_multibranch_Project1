@@ -4,24 +4,14 @@ pipeline
 
     stages 
     {
-        stage ('Initialize') 
-        {
-            steps {
-                sh "mvn -version"
-                sh "mvn clean install"
-            }
-        }
 
         stage('Build') 
         {
             steps 
             {
                 echo 'building the app'
-                script
-                {
-                    def test = 2 + 2 > 3 ? 'cool' : 'not cool'
-                    echo test
-                }
+                sh "mvn -version"
+                sh "mvn clean install"
             }
         }
 
