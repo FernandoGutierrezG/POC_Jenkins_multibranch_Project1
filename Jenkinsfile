@@ -10,8 +10,9 @@ pipeline
             steps 
             {
                 echo 'building the app'
-                sh "mvn -version"
-                sh "mvn clean install"
+                sh 'mvn -version'
+                sh 'mvn clean install'
+                echo 'app builded'
             }
         }
 
